@@ -7,10 +7,10 @@ const app = express();
 //});
 
 // middleware : si l'url correspond à un fichier c'est tout. si ne correspond pas au fichier, passe au middleware suivant
-app.use(express.static('.')); 
+app.use(express.static('c:/')); 
 
 // middleware qui sert à afficher joliment les répertoires
-app.use(serveIndex('.', {'icons': true}));
+app.use(serveIndex('c:/', {'icons': true}));
 
 
 app.listen(3000, function () {
