@@ -13,7 +13,7 @@ app.use(express.static('..'));
 app.use(serveIndex('..', {'icons': true}));
 
 // autre façon d'écrire un middleware
-app.use((req, res, next)) => {
+app.use((req, res, next) => {
     console.log('url not found', req.url);
     next();
 });
