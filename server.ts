@@ -8,6 +8,8 @@ import * as path from 'path';
 import { timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import {dir} from './dir';
+
 const context = {
   Enfant1: 9,
   Enfant2: 6,
@@ -33,6 +35,8 @@ app.use(serveIndex(www, { 'icons': true }));
 
 app.set('viewengine', 'ejs');
 app.set('views', './tmpl');
+
+app.use('/dir', dir);
 
 // Sans promise
 app.use((req, res, next) => {
