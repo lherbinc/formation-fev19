@@ -4,7 +4,31 @@ import * as serveIndex from 'serve-index';
 //const express = require('express');
 //const serveIndex = require('serve-index');
 const app = express();
+
+//création d'un type perso
+interface Person  {
+  name: string;
+  firstname: string;
+  age: number;
+  birthDay: Date;
+}
+
+const Laetitia: Person = {
+  name: 'Herbin', 
+  age: 39, 
+  firstname: 'Laetitia', 
+  birthDay: new Date()
+};
+
+function talk(p: Person) {
+  console.log('Je suis '+ p.firstname);
+}
+
+talk(Laetitia);
+
+
 const www: string = 'www';
+
 
 //app.get('/', function (req, res) {
 //  res.send('Hello World!');
