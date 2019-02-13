@@ -8,7 +8,7 @@ import * as path from 'path';
 import { timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import {dir} from './dir';
+import { dir } from './dir';
 
 const context = {
   Enfant1: 9,
@@ -45,7 +45,7 @@ app.use((req, res, next) => {
     res.render(filename, context);
     return;
   }
-   next();
+  next();
 });
 
 // Avec promise
