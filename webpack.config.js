@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'none',
   entry: './server.ts',
   output: {
     filename: 'server.js',
