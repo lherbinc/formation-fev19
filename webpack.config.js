@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  externals:[
+    /^[a-z\-0-9]+$/  // all modules from node_modules ignored.
+  ],
   target:'node',
   mode: 'none',
   entry: './server.ts',
