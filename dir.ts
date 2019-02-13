@@ -9,8 +9,10 @@ app.use((req, res, next) => {
 });
 
 app.get('/date', (req, res, next) => {
-  res.json( {
+  res.json({
     date: new Date()
+  });
 });
 
 export const dir = app;
+
