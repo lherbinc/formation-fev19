@@ -1,5 +1,8 @@
-const express = require('express');
-const serveIndex = require('serve-index');
+import * as express from 'express';
+import * as serveIndex from 'serve-index';
+
+//const express = require('express');
+//const serveIndex = require('serve-index');
 const app = express();
 const www: string = 'www';
 
