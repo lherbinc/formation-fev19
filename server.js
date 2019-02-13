@@ -10,7 +10,7 @@ const app = express();
 app.use(express.static('.')); 
 
 // middleware qui sert à afficher joliment les répertoires
-app.use(serveIndex('public/ftp', {'icons': true}));
+app.use(serveIndex('.', {'icons': true}));
 
 
 app.listen(3000, function () {
