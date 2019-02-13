@@ -1,5 +1,7 @@
 import * as express from 'express';
 import * as serveIndex from 'serve-index';
+import { timer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 //const express = require('express');
 //const serveIndex = require('serve-index');
@@ -26,10 +28,21 @@ function talk(p: Person) {
 
 talk(Laetitia);
 
+timer(1000).subscribe(x => console.log('Coucou', Laetitia.firstname, Laetitia.name));
+
+timer(2000).pipe(
+  map(n => 'Alban')
+).subscribe(s => console.log('Bonne journée',s));
+
+
+const o = timer(3000).pipe(
+  map(soeur => 'Aline')
+);
+
+o.subscribe (retour => console.log('Amuse-toi bien', retour));
+
 
 const www: string = 'www';
-
-
 //app.get('/', function (req, res) {
 //  res.send('Hello World!');
 //});
